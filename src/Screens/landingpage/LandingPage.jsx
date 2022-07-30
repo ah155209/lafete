@@ -6,9 +6,19 @@ import imag2 from '../../asset/img/about/2.jpg'
 import imag3 from '../../asset/img/about/3.jpg'
 import imag4 from '../../asset/img/about/4.jpg'
 import Slider from '../../Components/slider/Slider'
+import { useNavigate } from 'react-router-dom'
 
 
 function LandingPage() {
+
+
+const navigate=useNavigate()
+
+
+function handleclick(){
+navigate("/decordetails")
+}
+
   return (
     <>
     
@@ -23,7 +33,7 @@ function LandingPage() {
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
         </header>
-    <Slider/>
+    {/* <Slider/> */}
         
         {/* Services */}
         <section class="page-section" id="services">
@@ -33,7 +43,7 @@ function LandingPage() {
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row text-center justify-content-center">
-                    <div class="col-md-3 services-card ms-5 me-4">
+                    <div onClick={handleclick} class="col-md-3 services-card ms-5 me-4 cusor-pointer">
                     <img height="150" width="200" className='mt-4 service-img 's src="https://th.bing.com/th/id/R.41163199ba9826215163526ffdb6289e?rik=%2b4u%2blieBXrEjJA&riu=http%3a%2f%2fmnbudgetbride.com%2fwp-content%2fuploads%2f2013%2f03%2fbrideStore1.jpg&ehk=NFlyQeqComBmkoYRj8yTriOdO2KhUyKtPJFNInTB9Zo%3d&risl=&pid=ImgRaw&r=0"/>
 
                         <span class="fa-stack fa-4x">
